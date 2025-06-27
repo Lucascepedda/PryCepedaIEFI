@@ -29,63 +29,75 @@ namespace PryCepedaIEFI
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.lblBienvenidos = new System.Windows.Forms.Label();
+            this.rbUsuario = new System.Windows.Forms.RadioButton();
+            this.rbAdministrador = new System.Windows.Forms.RadioButton();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // lblBienvenidos
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuarioToolStripMenuItem,
-            this.auditoriaToolStripMenuItem,
-            this.stockToolStripMenuItem,
-            this.salirToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(397, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.lblBienvenidos.AutoSize = true;
+            this.lblBienvenidos.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenidos.ForeColor = System.Drawing.Color.Red;
+            this.lblBienvenidos.Location = new System.Drawing.Point(72, 32);
+            this.lblBienvenidos.Name = "lblBienvenidos";
+            this.lblBienvenidos.Size = new System.Drawing.Size(271, 34);
+            this.lblBienvenidos.TabIndex = 0;
+            this.lblBienvenidos.Text = "¡¡ BIENVENIDOS !!";
             // 
-            // usuarioToolStripMenuItem
+            // rbUsuario
             // 
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.rbUsuario.AutoSize = true;
+            this.rbUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rbUsuario.Location = new System.Drawing.Point(155, 205);
+            this.rbUsuario.Name = "rbUsuario";
+            this.rbUsuario.Size = new System.Drawing.Size(111, 32);
+            this.rbUsuario.TabIndex = 29;
+            this.rbUsuario.TabStop = true;
+            this.rbUsuario.Text = "Usuario";
+            this.rbUsuario.UseVisualStyleBackColor = true;
+            this.rbUsuario.CheckedChanged += new System.EventHandler(this.rbUsuario_CheckedChanged);
             // 
-            // auditoriaToolStripMenuItem
+            // rbAdministrador
             // 
-            this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
-            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.auditoriaToolStripMenuItem.Text = "Auditoria";
+            this.rbAdministrador.AutoSize = true;
+            this.rbAdministrador.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAdministrador.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rbAdministrador.Location = new System.Drawing.Point(122, 145);
+            this.rbAdministrador.Name = "rbAdministrador";
+            this.rbAdministrador.Size = new System.Drawing.Size(184, 32);
+            this.rbAdministrador.TabIndex = 28;
+            this.rbAdministrador.TabStop = true;
+            this.rbAdministrador.Text = "Administrador";
+            this.rbAdministrador.UseVisualStyleBackColor = true;
+            this.rbAdministrador.CheckedChanged += new System.EventHandler(this.rbAdministrador_CheckedChanged);
             // 
-            // stockToolStripMenuItem
+            // btnSiguiente
             // 
-            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.stockToolStripMenuItem.Text = "Stock";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.ForeColor = System.Drawing.Color.Red;
+            this.btnSiguiente.Location = new System.Drawing.Point(155, 294);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(107, 32);
+            this.btnSiguiente.TabIndex = 30;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(397, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(420, 358);
+            this.Controls.Add(this.btnSiguiente);
+            this.Controls.Add(this.rbUsuario);
+            this.Controls.Add(this.rbAdministrador);
+            this.Controls.Add(this.lblBienvenidos);
             this.Name = "frmMenu";
             this.Text = "Menú";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,10 +105,9 @@ namespace PryCepedaIEFI
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem auditoriaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Label lblBienvenidos;
+        private System.Windows.Forms.RadioButton rbUsuario;
+        private System.Windows.Forms.RadioButton rbAdministrador;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }

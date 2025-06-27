@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bdUsuarios.cs" />
     <Compile Include="clsConexion.cs" />
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
@@ -119,6 +120,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\password-manager_15445568.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Productos1.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tablas\Usuarios.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

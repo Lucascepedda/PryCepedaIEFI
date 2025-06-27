@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-
+using System.Data.OleDb;
 namespace PryCepedaIEFI
 {
     public partial class frmInicio : Form
@@ -23,23 +22,18 @@ namespace PryCepedaIEFI
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            string query = "select * from Contactos where Nombre='" + txtUsuario.Text + "'and Contraseña='" + txtContraseña.Text + "'";
-
-            SqlCommand Comando = new SqlCommand(query, conexion.Conectar());
-            SqlDataReader lector;
-            lector = Comando.ExecuteReader();
-
-            if (lector.HasRows == true)
+            string usuario, contraseña;
+            usuario = txtUsuario.Text;
+            contraseña = txtContraseña.Text;
+            if(usuario == "Lucas" && contraseña == "Lucascepeda10")
             {
-                MessageBox.Show("bienvenido");
-                Form Formulario = new frmMenu();
-                Formulario.Show();
-
-
+                frmMenu menu = new frmMenu();
+                menu.Show();
             }
             else
             {
-                MessageBox.Show("usuario o contraseña incorrectos");
+                MessageBox.Show("Te equivocaste pa!", "Datos erroneos",
+                    MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
         }
         private void frmMenu_Load(object sender, EventArgs e)

@@ -8,13 +8,89 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 
 namespace PryCepedaIEFI
 { 
 internal class ClsConexion
 {
-    SqlConnection conexion;
+        private readonly string cadenaConexion = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={AppDomain.CurrentDomain.BaseDirectory}Productos1.accdb;";
+        private OleDbConnection conexion;
+        public clsConexion()
+        {
+             conexion = new OleDbConnection(cadenaConexion);
+        }
+        public OleDbConnection ObtenerConexion()
+        {
+            return conexion;
+        }
+        public void Abrir()
+        {
+            if (conexion.State == System.Data.ConnectionState.Closed)
+            {
+                conexion.Open();
+            }
+        }
+        public void Cerrar()
+        {
+            if (conexion.State == System.Data.ConnectionState.Open)
+            {
+                conexion.Close();
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        SqlConnection conexion;
 
     public SqlConnection Conectar()
     {

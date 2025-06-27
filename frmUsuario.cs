@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace PryCepedaIEFI
 {
@@ -76,6 +77,11 @@ namespace PryCepedaIEFI
             {
                 MessageBox.Show("Registro Modificado");
             }
+        }
+
+        private void frmUsuario_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
